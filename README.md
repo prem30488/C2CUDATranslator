@@ -38,7 +38,15 @@ The kernel is the code to be ported on the GPU. So, First identify the code you
 
 Example
 
-#pragma kernel start for (i = 1; i <= 100; ++i) { for (j = 0; j < 100; ++j) { a [i ] [j ] = b[i ] [j ] + c[i ] [j ]; } } #pragma kernel end
+pragma kernel start 
+for (i = 1; i <= 100; ++i) 
+{ 
+  for (j = 0; j < 100; ++j) 
+  { 
+    a [i ] [j ] = b[i ] [j ] + c[i ] [j ]; 
+  } 
+} 
+pragma kernel end
 
 B.2.2 Kernel Variables Kernel variables are the variables which are copied to/from host/devices. User can specify them in their code by writing "kernel" in the declaration of that variable.
 
