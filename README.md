@@ -8,25 +8,31 @@ As today in so many fields, computation is the main part of the algorithm and ta
 Developer's Guide
 =================
 
-
-
 Developer's Guide C2CUDATranslator is very easy to work with. Developers are required to know C, CUDA C in detail in advance before using C2CUDATranslator. Additionally they are required to know ANTLR compulsory.
 
 C.1 Getting Started
 
 C2CUDATranslaor is like a framework to develop and test various code analysis algorithms in the field of source code to source code translation.
 
-C.1.1 C2CUDATranslator Project Structure The design of the project is shown below. Developers can see the Visual 2008 Solution project as given design on project website.
+C.1.1 C2CUDATranslator Project Structure 
+
+The design of the project is shown below. Developers can see the Visual 2008 Solution project as given design on project website.
 
 http://sites.google.com/a/nirmauni.ac.in/a/nirmauni.ac.in/cudacodes
 
 C.2 C2CUDATranslator development Details 
 
-C.2.1 Analysis Framework In C2CUDATranslator there is a file "Analysis.cs" which contains analysis algorithms. One can write his/her own algorithm in this file as a class or new function and can call in the parser. But the namespace must be C2CUDAranslator.Analysis. 
+C.2.1 Analysis Framework 
 
-C.2.2 Translation Framework Similarly, C2CUDATranslator.Translation is the framework that contains classes and codes for translation. Developers will find FOR, BLOCK etc. classes. They may contain properties like LOOP.index, LOOP.IsNestLoop etc. 
+In C2CUDATranslator there is a file "Analysis.cs" which contains analysis algorithms. One can write his/her own algorithm in this file as a class or new function and can call in the parser. But the namespace must be C2CUDAranslator.Analysis. 
 
-C.2.3 Use framework Developers can use collections those contains readonly, write-only variables and can use them in conditions in making analysis algorithms.
+C.2.2 Translation Framework 
+
+Similarly, C2CUDATranslator.Translation is the framework that contains classes and codes for translation. Developers will find FOR, BLOCK etc. classes. They may contain properties like LOOP.index, LOOP.IsNestLoop etc. 
+
+C.2.3 Use framework 
+
+Developers can use collections those contains readonly, write-only variables and can use them in conditions in making analysis algorithms.
 
 
 User's Guide
@@ -36,9 +42,14 @@ C2CUDATranslator is very easy to use. Users are required to know C in advance be
 
 B.1 Getting Started B.1.1 Input and Output of C2CUDATranslator
 
-Input.file - input to translator (C File) Output.file - output of the translator (CUDA File)
+Input.file - input to translator (C File) 
+Output.file - output of the translator (CUDA File)
 
-First, copy C program to input.le and run the translator. After running the translator copy CUDA code that has been converted or copy content of output.file. Put them in CUDA project. Run the project. B.2 C2CUDATranslator input Details B.2.1 Kernel Outlining
+First, copy C program to input.file and run the translator. After running the translator copy CUDA code that has been converted or copy content of output.file. Put them in CUDA project. Run the project. 
+
+B.2 C2CUDATranslator input Details 
+
+B.2.1 Kernel Outlining
 
 The kernel is the code to be ported on the GPU. So, First identify the code you want to run on GPU. It may be some computation code such as loops. Now, write "#pragma kernel start" before that code and at the end of the code write "#pragma kernel end".
 
