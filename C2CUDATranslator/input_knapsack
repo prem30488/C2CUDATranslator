@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <conio.h>
+#define MAXWEIGHT 100
+
+void main(int argc , char *argv [] )
+ {
+	int n=3; 
+    kernel int c[10];//={8,6,4}; 
+    kernel int v[10];//={16,10,7}; 
+    int W=10; 
+    kernel int a[MAXWEIGHT]; 
+    kernel int last_added[MAXWEIGHT]; 
+    int i;
+    int j;
+    int aux;
+
+	for(i = 0;i <= W ; i++)
+   	{
+        a[i] = 0;
+        last_added[i] = -1;
+    }
+	
+	#pragma kernel_start
+	
+	a[0] = 0;
+    for (i = 1; i <= W; ++i)
+    {
+          for (j = 0; j < n; ++j)
+            {
+			
+                if ( (c[j] <= i) && (a[i] < ( a[i-c[j]] + v[j] ) ) )
+                {
+                    a[i] = a[i-c[j]] + v[j];
+                    last_added[i] = j;
+                }
+
+         }
+
+    }
+	
+   printf("Total value added: %d$\n", a[W]);
+	
+   #pragma kernel_end 
+
+  for (i = 0; i <= W; ++i)
+    {
+        if (last_added[i] != -1)
+        {
+            //printf("Weight %d; Benefit: %d; To reach this weight I added object %d (%d$ %dKg) to weight %d.\n", i, a[i], last_added[i] + 1, v[last_added[i]], c[last_added[i]], i - c[last_added[i]]);
+        }
+        else
+        {
+           // printf("Weight %d; Benefit: 0; Can't reach this exact weight.last_added=%d\n", i,last_added[i]);
+        }
+    }
+ 
+  aux = 10;
+  
+    while ( (aux > 0) && (last_added[aux] != -1) )
+    {
+        //printf("Added object %d (%d$ %dKg). Space left: %d\n", last_added[aux] + 1, v[last_added[aux]], c[last_added[aux]], aux - c[last_added[aux]]);
+        aux -= c[last_added[aux]];
+    }
+
+    printf("Total value added: %d$\n", a[W]);
+
+    return 0;
+
+}
