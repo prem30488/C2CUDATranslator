@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="C2CUDAtranslator : Automatic Conversion of Source Code for C to CUDA C. **1 On Google** - http://code.google.com/p/c2cudatranslator/  **2 Thesis web site** - https://sites.google.com/a/nirmauni.ac.in/cudacodes/ongoing-projects/automatic-conversion-of-source-code-for-c-to-cuda-c" />
+    <meta name="description" content="C2CUDATranslator : Automatic Conversion of Source Code for C to CUDA C." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>C2CUDAtranslator</title>
+    <title>C2CUDATranslator</title>
   </head>
 
   <body>
@@ -18,8 +18,8 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/prem30488/C2CUDATranslator">View on GitHub</a>
 
-          <h1 id="project_title">C2CUDAtranslator</h1>
-          <h2 id="project_tagline">Automatic Conversion of Source Code for C to CUDA C. **1 On Google** - http://code.google.com/p/c2cudatranslator/  **2 Thesis web site** - https://sites.google.com/a/nirmauni.ac.in/cudacodes/ongoing-projects/automatic-conversion-of-source-code-for-c-to-cuda-c</h2>
+          <h1 id="project_title">C2CUDATranslator</h1>
+          <h2 id="project_tagline">Automatic Conversion of Source Code for C to CUDA C.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/prem30488/C2CUDATranslator/zipball/master">Download this project as a .zip file</a>
@@ -31,44 +31,168 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h1>
+<a name="welcome-to-c2cudatranslator" class="anchor" href="#welcome-to-c2cudatranslator"><span class="octicon octicon-link"></span></a>Welcome to C2CUDATranslator.</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>As today in so many fields, computation is the main part of the algorithm and takes too much time in execution of the algorithm, it is necessary to parallelize the computation or reduce execution time. GPUs are widely used in (HPC) <code>High Performance Computing</code>. To achieve speedup, either we can increase clock frequency or multiple computation cores on the same chip. The clock speeds have reached the physical limit, so the use of many cores is the only way left to achieve speedup. As the <code>GPU</code> is growing demand of the Game Industry and large scientific computations, efforts have been made to take advantages to gain maximum utilization of the GPUs in computation. Though GPUs are widely used in Supercomputers today, they are not code transparent because one has to sit and code the algorithms in <code>CUDA C</code> to run them on <code>nVIDIA GPU</code>. So if we can have some <code>middle ware</code> that converts the C programs to CUDA, the end user gets <code>transparency</code>. I tried to develop a prototype compiler using <code>ANTLR</code> in visual studio that converts the C programs in CUDA C language. The thesis describes the literature survey in CUDA, different performance optimization strategies to reduce execution time, the Pattern approach to develop a translator for source code to source code translation on the basis of selection of codes using patterns, platforms to code such translator and platform comparison and choice and algorithm of translation. The Compiler Architecture and its implementation details are widely described in thesis. The thesis describes implementation of the complete <code>C2CUDATranslator</code>, testing and analysis of the developed compiler. The compiler takes input of C program and generates CUDA program. The thesis demonstrates the pattern approach for language to language translation and the compiler flow architecture. <code>C2CUDAranslator</code> covers a new way or a framework to implement new analysis algorithms to detect dependencies in the code. The thesis also covers neural network design for compiler learning and optimization of the translated code. The Neural Network helps compiler to take decision for selection of transformation and translation. Finally, the thesis covers outcome of the compiler, converted programs list, evaluation using parboil benchmark suite, performance graph of converted programs. It is concluded that the <strong>C2CUDATranslator saves 95% of the development time in selected cases</strong>. <code>C2CUDA Translator</code> converts C code to CUDA C. It is also a framework to develop analysis and dependency checking algorithms for other developers. </p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<h1>
+<a name="developers-guide" class="anchor" href="#developers-guide"><span class="octicon octicon-link"></span></a>Developer's Guide</h1>
+
+<p><code>C2CUDATranslator</code> is very easy to work with. Developers are required to know C, CUDA C in detail in advance before using <code>C2CUDATranslator</code>. Additionally they are required to know <code>ANTLR</code> compulsory.</p>
+
+<h2>
+<a name="c1-getting-started" class="anchor" href="#c1-getting-started"><span class="octicon octicon-link"></span></a>C.1 Getting Started</h2>
+
+<p><code>C2CUDATranslaor</code> is like a framework to develop and test various code analysis algorithms in the field of source code to source code translation.</p>
+
+<h3>
+<a name="c11-c2cudatranslator-project-structure" class="anchor" href="#c11-c2cudatranslator-project-structure"><span class="octicon octicon-link"></span></a>C.1.1 C2CUDATranslator Project Structure</h3>
+
+<p>The design of the project is shown below. Developers can see the Visual 2008 Solution project as given design on project website.</p>
+
+<p><a href="https://sites.google.com/a/nirmauni.ac.in/cudacodes/">Thesis Site</a></p>
+
+<h2>
+<a name="c2-c2cudatranslator-development-details" class="anchor" href="#c2-c2cudatranslator-development-details"><span class="octicon octicon-link"></span></a>C.2 C2CUDATranslator development Details</h2>
+
+<h3>
+<a name="c21-analysis-framework" class="anchor" href="#c21-analysis-framework"><span class="octicon octicon-link"></span></a>C.2.1 Analysis Framework</h3>
+
+<p>In C2CUDATranslator there is a file <code>"Analysis.cs"</code> which contains analysis algorithms. One can write his/her own algorithm in this file as a class or new function and can call in the parser. But the namespace must be <code>C2CUDAranslator.Analysis</code>. </p>
+
+<h3>
+<a name="c22-translation-framework" class="anchor" href="#c22-translation-framework"><span class="octicon octicon-link"></span></a>C.2.2 Translation Framework</h3>
+
+<p>Similarly, <code>C2CUDATranslator.Translation</code> is the framework that contains classes and codes for translation. Developers will find FOR, BLOCK etc. classes. They may contain properties like <code>LOOP</code>.<code>index</code>, <code>LOOP.IsNestLoop</code> etc. </p>
+
+<h3>
+<a name="c23-use-framework" class="anchor" href="#c23-use-framework"><span class="octicon octicon-link"></span></a>C.2.3 Use framework</h3>
+
+<p>Developers can use collections those contains read only, write-only variables and can use them in conditions in making analysis algorithms.</p>
+
+<h1>
+<a name="users-guide" class="anchor" href="#users-guide"><span class="octicon octicon-link"></span></a>User's Guide</h1>
+
+<p><code>C2CUDATranslator</code> is very easy to use. Users are required to know C in advance before using <code>C2CUDATranslator</code>.</p>
+
+<h2>
+<a name="b1-getting-started" class="anchor" href="#b1-getting-started"><span class="octicon octicon-link"></span></a>B.1 Getting Started</h2>
+
+<h3>
+<a name="b11-input-and-output-of-c2cudatranslator" class="anchor" href="#b11-input-and-output-of-c2cudatranslator"><span class="octicon octicon-link"></span></a>B.1.1 Input and Output of C2CUDATranslator</h3>
+
+<pre><code>**Input.file** - input to translator (C File) 
+**Output.file** - output of the translator (CUDA File)
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>First, copy C program to input.file and run the translator. After running the translator copy CUDA code that has been converted or copy content of output.file. Put them in CUDA project. Run the project. </p>
+
+<h2>
+<a name="b2-c2cudatranslator-input-details" class="anchor" href="#b2-c2cudatranslator-input-details"><span class="octicon octicon-link"></span></a>B.2 C2CUDATranslator input Details</h2>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="b21-kernel-outlining" class="anchor" href="#b21-kernel-outlining"><span class="octicon octicon-link"></span></a>B.2.1 Kernel Outlining</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>The kernel is the code to be ported on the GPU. So, First identify the code you want to run on GPU. It may be some computation code such as loops. Now, write <code>"#pragma kernel start"</code> before that code and at the end of the code write <code>"#pragma kernel end"</code>.</p>
+
+<p><strong>Example</strong></p>
+
+<p>...</p>
+
+<h1>
+<a name="pragma-kernel-start" class="anchor" href="#pragma-kernel-start"><span class="octicon octicon-link"></span></a>pragma kernel start</h1>
+
+<p>for (i = 1; i &lt;= 100; ++i) 
+{ 
+   for (j = 0; j &lt; 100; ++j) 
+     { 
+       a [i ] [j ] = b[i ] [j ] + c[i ] [j ]; 
+     } 
+} </p>
+
+<h1>
+<a name="pragma-kernel-end" class="anchor" href="#pragma-kernel-end"><span class="octicon octicon-link"></span></a>pragma kernel end</h1>
+
+<p>...</p>
+
+<p>B.2.2 Kernel Variables </p>
+
+<p>Kernel variables are the variables which are copied to/from host/devices. User can specify them in their code by writing <code>"kernel"</code> in the declaration of that variable.</p>
+
+<p><strong>Example</strong></p>
+
+<pre><code>$ int a [100 ] [100 ]; 
+$ int b [100 ] [100 ]; 
+$ int c [100 ] [100 ];
+</code></pre>
+
+<p>a,b &amp; c arrays are used in kernel. So, we will write them as</p>
+
+<p>...
+$ kernel int a[100 ] [100 ]; 
+$ kernel int b[100 ] [100 ]; 
+$ kernel int c[100 ] [100 ];
+...</p>
+
+<p>B.2.3 Kernel local Variables</p>
+
+<p>If there are some local variables in the kernel code, they does not need to be copied to/from host/device. They can be initialized in GPU. We can write <code>"local kernel"</code> before the declaration statements of them.</p>
+
+<p><strong>Example</strong></p>
+
+<pre><code>$ int n=3; 
+$ int P=100;
+</code></pre>
+
+<p>n &amp; P are local variables used in kernel region. So, we will write them as </p>
+
+<p>...
+$ local kernel int n=3; 
+$ local kernel int P=100;
+...</p>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<a name="technologies-used" class="anchor" href="#technologies-used"><span class="octicon octicon-link"></span></a>Technologies Used</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<pre><code>$ Java - ANTLR.jar
+$ C# ASP.NET
+$ Visual Studio
+$ STG files with ANTLR - ANOTHER TOOL FOR LANGUAGE RECOGNITION
+$ Microsoft SQL Server 
+</code></pre>
+
+<h3>
+<a name="github-page" class="anchor" href="#github-page"><span class="octicon octicon-link"></span></a>Github page</h3>
+
+<p><a href="https://github.com/prem30488/C2CUDATranslator">C2CUDATranslator on Github</a></p>
+
+<h3>
+<a name="google-page" class="anchor" href="#google-page"><span class="octicon octicon-link"></span></a>Google Page</h3>
+
+<p><a href="http://code.google.com/p/c2cudatranslator/">C2CUDATranslator on Google</a></p>
+
+<h3>
+<a name="thesis-website" class="anchor" href="#thesis-website"><span class="octicon octicon-link"></span></a>Thesis Website</h3>
+
+<p><a href="https://sites.google.com/a/nirmauni.ac.in/cudacodes/ongoing-projects/automatic-conversion-of-source-code-for-c-to-cuda-c">C2CUDATranslator Thesis Website</a></p>
 
 <h3>
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p><strong>Author :</strong> (<a href="https://github.com/prem30488" class="user-mention">@prem30488</a>) Parth Trivedi </p>
 
 <h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Having trouble with Pages? Check out the documentation at <a href="https://sites.google.com/a/nirmauni.ac.in/cudacodes/ongoing-projects/automatic-conversion-of-source-code-for-c-to-cuda-c">https://sites.google.com/a/nirmauni.ac.in/cudacodes/ongoing-projects/automatic-conversion-of-source-code-for-c-to-cuda-c</a> or contact <a href="mailto:prem30488@gmail.com">prem30488@gmail.com</a> and we’ll help you sort it out.</p>
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">C2CUDAtranslator maintained by <a href="https://github.com/prem30488">prem30488</a></p>
+        <p class="copyright">C2CUDATranslator maintained by <a href="https://github.com/prem30488">prem30488</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
