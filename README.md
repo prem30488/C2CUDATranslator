@@ -20,7 +20,13 @@ C.1.1 C2CUDATranslator Project Structure The design of the project is shown belo
 
 http://sites.google.com/a/nirmauni.ac.in/a/nirmauni.ac.in/cudacodes
 
-C.2 C2CUDATranslator development Details C.2.1 Analysis Framework In C2CUDATranslator there is a le "Analysis.cs" which contains analysis algorithms. One can write his/her own algorithm in this le as a class or new function and can call in the parser. But the namespace must be C2CUDAranslator.Analysis. C.2.2 Translation Framework Similarly, C2CUDATranslator.Translation is the framework that contains classes and codes for translation. Developers will nd FOR, BLOCK etc. classes. They may contain proper- ties like LOOP.index, LOOP.IsNestLoop etc. C.2.3 Use framework Developers can use collections those contains readonly, write-only variables and can use them in conditions in making analysis algorithms.
+C.2 C2CUDATranslator development Details 
+
+C.2.1 Analysis Framework In C2CUDATranslator there is a file "Analysis.cs" which contains analysis algorithms. One can write his/her own algorithm in this file as a class or new function and can call in the parser. But the namespace must be C2CUDAranslator.Analysis. 
+
+C.2.2 Translation Framework Similarly, C2CUDATranslator.Translation is the framework that contains classes and codes for translation. Developers will find FOR, BLOCK etc. classes. They may contain properties like LOOP.index, LOOP.IsNestLoop etc. 
+
+C.2.3 Use framework Developers can use collections those contains readonly, write-only variables and can use them in conditions in making analysis algorithms.
 
 
 User's Guide
@@ -30,7 +36,7 @@ C2CUDATranslator is very easy to use. Users are required to know C in advance be
 
 B.1 Getting Started B.1.1 Input and Output of C2CUDATranslator
 
-Input.file - input to translator (C File) Output.file - output of the translator (CUDA File)
+Input.file - input to translator (C File) Output.file - output of the translator (CUDA File)
 
 First, copy C program to input.le and run the translator. After running the translator copy CUDA code that has been converted or copy content of output.file. Put them in CUDA project. Run the project. B.2 C2CUDATranslator input Details B.2.1 Kernel Outlining
 
