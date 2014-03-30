@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="C2CUDATranslatorLexer">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="C2CUDATranslatorLexer.DFA4" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorLexer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorLexer.DFA14" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorLexer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorLexer.DFA6" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorLexer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorLexer.DFA9" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorLexer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorLexer.DFA28" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorLexer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>8fHfPCAYrZYFhd4RUSgABvwEcAHYr399ABUI0sv/AqQ=</HashCode>
+      <FileName>C2CUDATranslatorLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="C2CUDATranslatorParser">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="C2CUDATranslatorParser.afexpr_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.printfParameter_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.type_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.STAttrMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.DFA33" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.DFA16" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.assignStat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.DFA3" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.condExpr_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.statement_list_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.block_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.selection_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.mdeclarator_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.forStat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.declarator_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kstat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.atom_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.while_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.mblock_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.define_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kcondExpr_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kprint_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kincStat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kernel_function_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.DFA2" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kassignStat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.DFA22" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kblock_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.main_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.program_scope" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kdeclarator_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.DFA55" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kselection_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.function_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.formalParameter_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.aftom_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.arraydeclarator_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kwhile_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.incStat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.func_call_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.program_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.rdeclarator_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.print_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.digits_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.variable_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.DFA32" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.slist_scope" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.include_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kkblock_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.expr_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.DFA12" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.func_call2_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.function_scope" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.expression_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kforStat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kernel_variable_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.stat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kstatement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.katom_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.return_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kreturn_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kernel_function_scope" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kernel_array_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.funcDecl_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.declaration_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.aexpr_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kaexpr_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="C2CUDATranslatorParser.kexpr_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>C2CUDATranslatorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>v/r///9f/v/////fvu//b/733f75/////3hf//9/778=</HashCode>
+      <FileName>C2CUDATranslatorParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternGeneratorLexer">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="PatternGeneratorLexer.DFA4" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorLexer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorLexer.DFA20" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorLexer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorLexer.DFA14" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorLexer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorLexer.DFA18" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorLexer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorLexer.DFA33" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorLexer.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>UfBfPTSYvZUFhd8DUyqIAPwEsIF473/8ABQI0oP+A7A=</HashCode>
+      <FileName>PatternGeneratorLexer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatternGeneratorParser">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="PatternGeneratorParser.print_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.printfParameter_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.atom_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.selection_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.forStat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.arraydeclarator_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.aexpr_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.pattern_scope" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.rdeclarator_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.cudafunctiontype_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.pattern_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.condExpr_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.STAttrMap" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.declarator_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.DFA15" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.statement_list_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.func_call_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.incStat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.DFA2" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.kernelfunction_scope" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.formalParameter_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.kernelfunction_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.DFA11" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.type_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.stat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.declaration_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.assignStat_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.block_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.define_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.return_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.include_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.digits_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.while_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.kdeclarator_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.variable_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.slist_scope" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.expr_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="PatternGeneratorParser.expression_statement_return" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>PatternGeneratorParser.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>5e5/9sl97vJa5v7+/+49Zf8/AHi5/3+/3ZuM+8/+5+0=</HashCode>
+      <FileName>PatternGeneratorParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="C2CUDATranslator.Program">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAYAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
