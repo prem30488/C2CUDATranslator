@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main(int argc , char *argv [] )
+ {
+	kernel float A[64][128];
+    kernel float B[128][32];
+    kernel float C[64][32];
+ 
+    // Randomly init A and B.
+    //randomInitArr((float*)A, 64*128);
+    //randomInitArr((float*)B, 128*32);
+ 
+    // C = A * B
+    #pragma kernel_start
+    for (i = 0; i < 64; ++i) 
+    {
+       for (j = 0; j < 32; ++j) 
+       {
+           float sum;
+           sum = 0;
+           for (k = 0; k < 128; ++k) {
+               sum += A[i][k] * B[k][j];
+           }
+           C[i][j] = sum;
+       }
+   }
+   #pragma kernel_end
+   //printMatrix((float*)C, 64, 32);
+
+}
