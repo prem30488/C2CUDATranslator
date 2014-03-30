@@ -98,23 +98,16 @@
 
 <p><strong>Example</strong></p>
 
-<p>...</p>
-
-<h1>
-<a name="pragma-kernel-start" class="anchor" href="#pragma-kernel-start"><span class="octicon octicon-link"></span></a>pragma kernel start</h1>
-
-<p>for (i = 1; i &lt;= 100; ++i) 
+<pre><code>#pragma kernel start 
+for (i = 1; i &lt;= 100; ++i) 
 { 
    for (j = 0; j &lt; 100; ++j) 
      { 
        a [i ] [j ] = b[i ] [j ] + c[i ] [j ]; 
      } 
-} </p>
-
-<h1>
-<a name="pragma-kernel-end" class="anchor" href="#pragma-kernel-end"><span class="octicon octicon-link"></span></a>pragma kernel end</h1>
-
-<p>...</p>
+} 
+#pragma kernel end
+</code></pre>
 
 <p>B.2.2 Kernel Variables </p>
 
@@ -129,11 +122,10 @@ $ int c [100 ] [100 ];
 
 <p>a,b &amp; c arrays are used in kernel. So, we will write them as</p>
 
-<p>...
-$ kernel int a[100 ] [100 ]; 
+<pre><code>$ kernel int a[100 ] [100 ]; 
 $ kernel int b[100 ] [100 ]; 
 $ kernel int c[100 ] [100 ];
-...</p>
+</code></pre>
 
 <p>B.2.3 Kernel local Variables</p>
 
@@ -147,10 +139,9 @@ $ int P=100;
 
 <p>n &amp; P are local variables used in kernel region. So, we will write them as </p>
 
-<p>...
-$ local kernel int n=3; 
+<pre><code>$ local kernel int n=3; 
 $ local kernel int P=100;
-...</p>
+</code></pre>
 
 <h3>
 <a name="technologies-used" class="anchor" href="#technologies-used"><span class="octicon octicon-link"></span></a>Technologies Used</h3>
@@ -159,6 +150,7 @@ $ local kernel int P=100;
 $ C# ASP.NET
 $ Visual Studio
 $ STG files with ANTLR - ANOTHER TOOL FOR LANGUAGE RECOGNITION
+$ ANTLRWorks
 $ Microsoft SQL Server 
 </code></pre>
 
