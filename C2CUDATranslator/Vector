@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+#define N 1024
+
+int main( int argc)
+{
+    int n=3; /* The number of objects */
+   
+    kernel float a[1024];
+    kernel float b[1024];
+    kernel float c[1024];
+    
+    int i;
+    int j;
+    
+    for (i = 0; i <= N; ++i)
+    {
+        a[i] = i;
+        b[i] = i;
+        
+    }
+    
+#pragma kernel_start
+            for (i = 0; i < N; i++)
+            {
+                c[i] = a[i] + b[i]; 
+            }  
+#pragma kernel_end
+
+    for(i = 0; i < N; i++)
+    {
+    printf("A=%6.2f B=%6.2f A+B = %6.2f\n",a[i],b[i],c[i]);
+    }
+
+    return 0;
+}                                                                                               
