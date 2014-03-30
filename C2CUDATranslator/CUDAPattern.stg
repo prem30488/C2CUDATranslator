@@ -1,0 +1,105 @@
+group CUDA;
+
+pattern(kernelfunction) ::= <<
+<kernelfunction; separator="\n">
+>>
+
+
+variable(type,name) ::= "<type> <name>;"
+
+globalVariable ::= variable
+
+function(type,name,args,locals,stats) ::= <<
+<type> <name>(<args; separator=", ">) {
+    <locals; separator="\n">
+    <stats; separator="\n">
+}
+>>
+
+kernelfunction(cudafunctiontype,type,name,args,locals,stats) ::= <<
+<cudafunctiontype> <type> <name>(parameters) {
+    <locals; separator="\n">
+    <stats; separator="\n">
+}
+>>
+
+
+type(name) ::= "<name>"
+
+
+type_int() ::= "int"
+type_kernel_int() ::= "int"
+
+type_char() ::= "char"
+type_kernel_char() ::= "char"
+
+type_float() ::= "float"
+type_kernel_float() ::= "float"
+
+type_bool() ::= "bool"
+type_kernel_bool() ::= "bool"
+
+type_kernel_Memalloc() ::= ""
+
+type_user_object(name) ::= "<name>"
+type_kernel_object(name) ::= "<name>;"
+
+include(type,name) ::= "<type> <name>"
+
+define(type,name,val) ::= "<type> <name> <val>"
+
+parameter(type,name) ::= "<type> <name>"
+printfpara(name) ::= ",<name>"
+
+statement(expr) ::= "<expr>;"
+kernel_array2D(type,name,arr) ::= "<type> <name>;<type> **g_<arr>;"
+statementList(locals,stats) ::= <<
+{
+    <locals; separator="\n">
+    <stats; separator="\n">
+}<\n>
+>>
+
+forLoop(e1,e2,e3,locals,stats) ::= <<
+forloop(<e2>) {
+    <locals; separator="\n">
+     <stats; separator="\n">
+}
+>>
+
+whileLoop(e1,locals,stats) ::= <<
+while (<e1>) {
+    <locals; separator="\n">
+     <stats; separator="\n">
+}
+>>
+
+kforLoop(e1,e2,e3,locals,stats) ::= <<
+for (int <e1> <e2>; <e3>) {
+    <locals; separator="\n">
+     <stats; separator="\n">
+}
+>>
+
+
+assign(lhs,rhs) ::= "<lhs> = <rhs>;"
+assignop(lhs,rhs,op) ::= "<lhs> <op> <rhs>;"
+
+equals(left,right) ::= "<left> == <right>"
+notequals(left,right) ::= "<left> != <right>"
+lessThan(left,right) ::= "<left> \< <right>"
+GreaterThan(left,right) ::= "<left> \> <right>"
+lessThanEq(left,right) ::= "<left> \<= <right>"
+GreaterThanEq(left,right) ::= "<left> \>= <right>"
+CAND(left,right) ::= "(<left>) && (<right>)"
+COR(left,right) ::= "(<left>) || (<right>)"
+
+add(left,right) ::= "<left> + <right>"
+Sub(left,right) ::= "<left> - <right>"
+Div(left,right) ::= "<left> \/ <right>"
+Mul(left,right) ::= "<left> * <right>"
+Mod(left,right) ::= "<left> % <right>"
+
+refVar(id) ::= "<id>"
+iconst(value) ::= "<value>"
+refarr(id,value) ::= "<value>"
