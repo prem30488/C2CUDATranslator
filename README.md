@@ -40,7 +40,9 @@ User's Guide
 
 C2CUDATranslator is very easy to use. Users are required to know C in advance before using C2CUDATranslator.
 
-B.1 Getting Started B.1.1 Input and Output of C2CUDATranslator
+B.1 Getting Started 
+
+B.1.1 Input and Output of C2CUDATranslator
 
 Input.file - input to translator (C File) 
 Output.file - output of the translator (CUDA File)
