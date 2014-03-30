@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+ int main(int argc , char *argv [] )
+{	
+	int i;
+	kernel int a[1024];
+	kernel int b[1024];
+	kernel int c[1024];
+//	kernel int d[1024];
+	
+	for(i = 0;i<1024; i++)
+	{
+	a[i]=i;
+	b[i]=i;
+//	c[i]=i;
+//	d[i]=i;
+	}
+	#pragma kernel_start
+	
+	for(j =0;j<1024;j++)
+	{
+	c[j] = c[j] + b[j];  
+//	kernel(a,b,c);	
+//	a[i] = a[i] + b[i];  
+	//b[i+1] = c[i] + d[i];
+	
+	}
+#pragma kernel_end
+	for(i =0;i<1024;i++)
+	{
+	printf("\n c[%d] = %d",i,c[i]);;
+	//printf("\n a[%d] = %d and b[%d]=%d",i,a[i],i,b[i]);;
+	}
+	return 0;
+}
