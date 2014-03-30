@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+#define lena 4
+#define lenb 6
+
+
+int main()
+{
+
+	kernel int nconv;
+        int i;
+	int j;
+	int i1;
+	float tmp;
+        kernel float C;
+	
+	kernel float a[lena];
+	kernel float b[lenb];
+
+	printf("\n Vector A\n");
+	for(i = 0;i<lena;i++)
+	{
+		a[i] = i+1;
+		printf(" a[%d]=%2.2f ",i,a[i]);;
+	}
+	printf("\n Vector B\n");
+	for(i = 0;i<lenb;i++)
+	{
+		b[i]=i+5;
+		printf(" b[%d]=%2.2f",i,b[i]);;
+	}
+ nconv = (lena+ lenb) - 1;
+#pragma kernel_start
+	    //allocated convolution array
+   
+
+ 
+    
+    //convolution process
+    for (i = 0; i<nconv; i++)
+    {
+        i1 = i;
+        tmp = 0;
+        for (j = 0; j<lenb; j++)
+        {
+            if( (i1>=0) && (i1<lena) )
+			{
+                tmp = (a[i1]*b[j]) + tmp ;
+			}
+            i1 = i1 - 1;
+            C[i] = tmp;
+        }
+    }
+    #pragma kernel_end
+	printf("\n Vector C\n");
+	for(i = 0;i<nconv;i++)
+	{
+		printf(" c[%d]=%2.2f ",i,C[i]);;
+	}
+
+	return 0;
+}
