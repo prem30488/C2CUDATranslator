@@ -1,0 +1,76 @@
+group CUDA;
+
+program(globals,functions,kernelvars,includes) ::= <<
+/*Parth C2CUDA Generated CODE */
+<includes; separator="\n">
+void main(int argc, char *argv[]) {
+    <globals; separator="\n">
+	<kernelvars; separator="\n">
+    <functions; separator="\n">
+	<kernel_functions; separator="\n">
+}
+
+>>
+
+variable(type,name) ::= "<type> <name>;"
+kernel_variable(type,name) ::= "<type> <name>;<type> *g_<name>;"
+
+globalVariable ::= variable
+
+function(type,name,args,locals,stats) ::= <<
+<type> <name>(<args; separator=", ">) {
+    <locals; separator="\n">
+    <stats; separator="\n">
+}
+>>
+
+kernel_function(type,name,args,locals,stats) ::= <<
+<type> kernel(<args; separator=", ">) {
+    <locals; separator="\n">
+    <stats; separator="\n">
+}
+>>
+
+type(name) ::= "<name>"
+
+type_int() ::= "int"
+type_kernel_int() ::= "int"
+
+type_char() ::= "char"
+type_kernel_char() ::= "char"
+type_kernel() ::= ""
+
+type_user_object(name) ::= "<name>"
+type_kernel_object(name) ::= "<name>;"
+
+include(type) ::= "<type>"
+
+parameter(type,name) ::= "<type> <name>"
+
+statement(expr) ::= "<expr>;"
+
+statementList(locals,stats) ::= <<
+{
+    <locals; separator="\n">
+    <stats; separator="\n">
+}<\n>
+>>
+
+forLoop(e1,e2,e3,locals,stats) ::= <<
+for (<e1> <e2>; <e3>) {
+    <locals; separator="\n">
+    <stats; separator="\n">
+}
+>>
+
+assign(lhs,rhs) ::= "<lhs> = <rhs>;"
+
+equals(left,right) ::= "<left> == <right>"
+
+lessThan(left,right) ::= "<left> \< <right>"
+
+add(left,right) ::= "<left> + <right>"
+
+refVar(id) ::= "<id>"
+
+iconst(value) ::= "<value>"
