@@ -94,11 +94,11 @@
 <h3>
 <a name="b21-kernel-outlining" class="anchor" href="#b21-kernel-outlining"><span class="octicon octicon-link"></span></a>B.2.1 Kernel Outlining</h3>
 
-<p>The kernel is the code to be ported on the GPU. So, First identify the code you want to run on GPU. It may be some computation code such as loops. Now, write <code>"#pragma kernel start"</code> before that code and at the end of the code write <code>"#pragma kernel end"</code>.</p>
+<p>The kernel is the code to be ported on the GPU. So, First identify the code you want to run on GPU. It may be some computation code such as loops. Now, write <code>"#pragma kernel_start"</code> before that code and at the end of the code write <code>"#pragma kernel_end"</code>.</p>
 
 <p><strong>Example</strong></p>
 
-<pre><code>#pragma kernel start 
+<pre><code>#pragma kernel_start 
 for (i = 1; i &lt;= 100; ++i) 
 { 
    for (j = 0; j &lt; 100; ++j) 
@@ -106,7 +106,7 @@ for (i = 1; i &lt;= 100; ++i)
        a [i ] [j ] = b[i ] [j ] + c[i ] [j ]; 
      } 
 } 
-#pragma kernel end
+#pragma kernel_end
 </code></pre>
 
 <p>B.2.2 Kernel Variables </p>
@@ -189,7 +189,17 @@ $ Microsoft SQL Server
       </footer>
     </div>
 
-    
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-32478424-5");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
 
   </body>
 </html>
