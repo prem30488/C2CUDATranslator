@@ -1,0 +1,91 @@
+/*Parth C2CUDA Generated CODE */
+#include <stdio.h>
+#include <conio.h>
+#define MAXWEIGHT 100
+
+/* Include CUDA runtime library headers */
+#include <cuda_runtime.h>
+void main(int argc, char *argv[]) {
+        int n=3;
+        int W=10;
+        int i,j;
+        int aux;
+
+        //Kernel Variables
+        int c[10];int *g_c;
+        int v[10];int *g_v;
+        int a[MAXWEIGHT];int *g_a;
+        int last_added[MAXWEIGHT];int *g_last_added;
+
+        //CUDA GRID BLOCK SIZE AND NUMBER OF BLOCKS
+        int block_size = 1;
+        int n_blocks = N/block_size + (N%block_size == 0 ? 0:1);
+
+        for (i = 0; i <= W; i++) {
+             a[i] = 0;
+             last_added[i] = -1;
+        }
+
+        // Memory Allocation
+        g_c= (int *)malloc(size); // Allocate array on host
+         cudaMalloc((void **) &c, size); // Allocate array on device
+        g_v= (int *)malloc(size); // Allocate array on host
+         cudaMalloc((void **) &v, size); // Allocate array on device
+        g_a= (int *)malloc(size); // Allocate array on host
+         cudaMalloc((void **) &a, size); // Allocate array on device
+        g_last_added= (int *)malloc(size); // Allocate array on host
+         cudaMalloc((void **) &last_added, size); // Allocate array on device
+
+        // Copy Data to device from host
+        cudaMemcpy(g_c, c, size, cudaMemcpyHostToDevice);
+        cudaMemcpy(g_v, v, size, cudaMemcpyHostToDevice);
+        cudaMemcpy(g_a, a, size, cudaMemcpyHostToDevice);
+        cudaMemcpy(g_last_added, last_added, size, cudaMemcpyHostToDevice);
+
+        // call kernel
+         kernel <<< n_blocks, block_size >>>(int *g_c,int *g_v,int *g_a,int *g_l
+ast_added);
+
+        // Retrieve result from device and store it in host array
+        cudaMemcpy(c, g_c, size, cudaMemcpyDeviceToHost);
+        cudaMemcpy(v, g_v, size, cudaMemcpyDeviceToHost);
+        cudaMemcpy(a, g_a, size, cudaMemcpyDeviceToHost);
+        cudaMemcpy(last_added, g_last_added, size, cudaMemcpyDeviceToHost);
+
+        // Free GPU Variables
+        cudaFree(g_c);
+        cudaFree(g_v);
+        cudaFree(g_a);
+        cudaFree(g_last_added);
+
+
+        for (i = 0; i <= W; ++i) {
+             if (last_added[i] != -1){
+             }
+
+             else {
+             }
+
+        }
+        aux = 10;
+        while ((aux > 0) && (last_added[aux] != -1)) {
+             aux -= gpu_c[last_added[aux]];
+        }
+        printf("Total value added: %d$\n",a[W])
+        return 0;
+
+}
+__global__ void kernel(int *gpu_c,int *gpu_v,int *gpu_a,int *gpu_last_added) {
+    gpu_a[0] = 0;
+    for (int gpu_i = 1; gpu_i <= gpu_W; ++i) {
+         for (int gpu_j = 0; gpu_j < gpu_n; ++j) {
+              if ((gpu_c[j] <= gpu_i) && (gpu_a[i] < gpu_a[i-c[j]] + gpu_v[j])){
+
+                  gpu_a[i] = gpu_a[i-c[j]] + gpu_v[j];
+                  gpu_last_added[i] = gpu_j;
+              }
+
+         }
+    }
+    //printf("Total value added: %d$\n",gpu_a[W])
+}
