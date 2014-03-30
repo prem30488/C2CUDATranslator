@@ -1,0 +1,47 @@
+    #include<stdio.h>
+    #include<conio.h>
+    #include<string.h>
+      
+    #define ROWSIZE 3    
+    #define COLSIZE 3    
+    int main(int argc , char *argv [] )
+    {
+		int i;
+		int j;
+		
+		kernel int a[ROWSIZE][COLSIZE];
+		kernel int b[ROWSIZE][COLSIZE];
+		kernel int c[ROWSIZE][COLSIZE];
+		
+		for(i = 0;i<ROWSIZE;i++)
+		{
+			for(j = 0;j<COLSIZE;j++)
+			{
+				a[i][j] = 1;
+				b[i][j] = 2;
+			}
+		}
+		#pragma kernel_start
+		
+		for(i = 0;i<ROWSIZE;i++)
+		{
+			for(j = 0;j<COLSIZE;j++)
+			{
+				c[i][j]=a[i][j]+b[i][j];
+				//c[i]=a[i]+b[i];
+			}
+		}
+		
+		#pragma kernel_end
+		
+		for(i = 0;i<ROWSIZE;i++)
+		{
+			for(j = 0;j<COLSIZE;j++)
+			{
+				//printf("\n a=%d b=%d c=%d",a[i],b[i],c[i]);;
+				printf("\n a=%d b=%d c=%d",a[i][j],b[i][j],c[i][j]);;
+			}
+		}
+		
+		return 0;
+    } 
