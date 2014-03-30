@@ -1,0 +1,44 @@
+    #include<stdio.h>
+    #include<conio.h>
+    #include<string.h>
+      
+    #define SIZE 3    
+    int main(int argc , char *argv [] )
+    {
+		int i;
+		int j;
+		
+		kernel int a[SIZE][SIZE];
+		kernel int b[SIZE][SIZE];
+		kernel int c[SIZE][SIZE];
+		
+		for(i = 0;i<SIZE;i++)
+		{
+			for(j = 0;j<SIZE;j++)
+			{
+				a[i][j] = i*j;
+				b[i][j] = i*j;
+			}
+		}
+		#pragma kernel_start
+		
+		for(i = 0;i<SIZE;i++)
+		{
+			for(j = 0;j<SIZE;j++)
+			{
+				c[i][j]=a[i][j]+b[i][j];
+			}
+		}
+		
+		#pragma kernel_end
+		
+		for(i = 0;i<SIZE;i++)
+		{
+			for(j = 0;j<SIZE;j++)
+			{
+				printf("\n a=%d b=%d c=%d",a[i][j],b[i][j],c[i][j]);;
+			}
+		}
+		
+		return 0;
+    } 
