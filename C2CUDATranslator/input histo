@@ -1,0 +1,61 @@
+    #include<stdio.h>
+    #include<conio.h>
+    #include<string.h>
+      
+    #define ROWSIZE 10    
+    #define COLSIZE 10    
+    int main(int argc , char *argv [] )
+    {
+		int i;
+		int j;
+		int sum;
+		
+		kernel int a[ROWSIZE][COLSIZE];
+			
+		kernel  int histogram[100];
+		
+		for(i = 0;i<ROWSIZE;i++)
+		{
+			for(j = 0;j<COLSIZE;j++)
+			{
+				a[i][j] = rand() % 100;
+			}
+		}
+		for(i = 0;i<100;i++)
+		{
+			histogram[i]=0;
+		}
+		printf("\n A = ");;
+		for(i = 0;i<ROWSIZE;i++)
+		{
+			printf("\n");;
+			for(j = 0;j<COLSIZE;j++)
+			{
+				printf(" %d ",a[i][j]);;
+			}
+		}
+
+
+		#pragma kernel_start
+		
+		for(i = 0;i<ROWSIZE;i++)
+		{
+			for(j = 0;j<COLSIZE;j++)
+			{
+			int b;
+			b = a[i][j];
+			histogram[b] = histogram[b] + 1;
+			}
+		}
+		
+		#pragma kernel_end
+		
+		printf("\n Histogram = ");;
+		for(i = 0;i<100;i++)
+		{
+				printf("\n%d = %d ",i,histogram[i]);;
+		}
+		printf("\n");;
+		
+		return 0;
+    } 
